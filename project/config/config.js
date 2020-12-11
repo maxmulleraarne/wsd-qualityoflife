@@ -4,7 +4,7 @@ if (Deno.env.get('TEST_ENVIRONMENT')) {
   config.database = {};
 } else {
   config.database = {
-    hostname: "http://kandula.db.elephantsql.com",
+    hostname: "kandula.db.elephantsql.com",
     database: "zczukuha",
     user: "zczukuha",
     password: "FK8tGoTvdEy1m5UqyT8VTtWIIY2r3pqi",
