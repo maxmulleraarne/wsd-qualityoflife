@@ -1,0 +1,35 @@
+﻿The necessary CREATE TABLE statements are the following:
+
+CREATE TABLE morning_content(
+mail text,
+sleepduration float,
+sleepquality int,
+mood int,
+date DATE
+);
+
+
+CREATE TABLE evening_content(
+mail text,
+sportduration float,
+studyduration float,
+eating int,
+mood int,
+date DATE
+);
+
+
+CREATE TABLE users(
+mail varchar(255),
+name varchar(255),
+password varchar(255)
+);
+
+
+Running the application locally can be done at port 7777 and by initializing the database at ‘/config/config.js’
+
+
+By running the command $ deno run --allow-net --allow-env --allow-read --unstable app.js at the root folder the application is launched.
+
+
+The application can be accessed at http://165.232.45.12:7777/
