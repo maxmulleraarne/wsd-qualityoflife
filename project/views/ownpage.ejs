@@ -1,0 +1,18 @@
+<h1> Logged in as  <%= mail %>!</h1>
+
+<h2> If you wish to add a report please click the button below </h2>
+
+<form method="POST" action="/behavior/reporting">
+    <input type="submit" value="report behavior" />
+</form>
+
+<h2> for a summary of your average stats click the summary button </h2>
+
+
+<form method="POST" action="/behavior/summary">
+    <input type="submit" value="summary" />
+</form>
+
+<form method="POST" action="/auth/logout">
+    <input type="submit" value="logout" />
+</form>

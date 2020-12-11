@@ -1,0 +1,27 @@
+
+<h1>Welcome to the quality of life tracker</h1>
+
+<h2> Here you can track your daily quality of life and get awesome stats on your past days </h2>
+
+<h2>New user? Register here!</h2>
+<form method="POST" action="/auth/registration">
+    <input type="submit" value="register" />
+</form>
+
+<h2>Already registered? Please login here</h2>
+<form method="POST" action="/auth/login">
+    <input type="submit" value="login" />
+</form>
+
+<% if (lm) { %>
+    <h2>Average stats from all users for the last month</h2>
+    <ul>
+        <li>Average sleep duration <%= lm.sleepd %></li>
+        <li>Average sleep quality <%= lm.sleepq %></li>
+        <li>Average morning mood <%= lm.mormood %></li>
+        <li>Average time spent on sports <%= lm.sportdur %></li>
+        <li>Average time spent on studying <%= lm.studydur %></li>
+        <li>Average regularity and quality of eating <%= lm.eat %></li>
+        <li>Average evening mood <%= lm.evemood %></li>
+    </ul>
+<% } %>

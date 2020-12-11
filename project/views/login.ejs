@@ -1,0 +1,20 @@
+<h1>Please enter your login credential</h1>
+
+<% if (errors && errors.length > 0) { %>
+    <ul>
+        <% errors.forEach((error) => { %>
+            <li><%= error %></li>
+        <% }); %>
+    </ul>
+<% } %>
+
+<form method="POST" action="/auth/submitlogin">
+    <input type='text' name='email' placeholder="email"/>
+    <input type='text' name='password' placeholder="password"/>
+    <input type="submit" value="login" />
+</form>
+
+<h2>New user? Register here!</h2>
+<form method="POST" action="/auth/registration">
+    <input type="submit" value="register" />
+</form>

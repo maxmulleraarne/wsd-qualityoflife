@@ -1,0 +1,35 @@
+<h1> Logged in as  <%= mail %>!</h1>
+
+
+<% if (errors && errors.length > 0) { %>
+    <ul>
+        <% errors.forEach((error) => { %>
+            <li><%= error %></li>
+        <% }); %>
+    </ul>
+<% } %>
+
+<h2> Please fill in the report below if you wish to report behavior from a morning </h2>
+
+<form method="POST" action="/behavior/morningreport">
+    <input type="number" name="sleepduration" placeholder="sleepduration" step='any' min="0" max="24" value="<%= sleepd %>"/>
+    <input type="number" name="sleepquality" placeholder="sleepquality" min="1" max="5" value="<%= sleepq %>"/>
+    <input type="number" name="mood" placeholder="mood" min="1" max="5" value="<%= mmood %>"/>
+    <input type="date" name="date" placeholder="date" value="<%= date %>"/>
+    <input type="submit" value="report morning behavior" />
+</form>
+
+<h2> Please fill in the report below if you wish to report behavior from an evening </h2>
+
+<form method="POST" action="/behavior/eveningreport">
+    <input type="number" name="sport" placeholder="time spent on sports" step='any' min="0" max="24" value="<%= sport %>"/>
+    <input type="number" name="study" placeholder="time spent on studying" step='any' min="0" max="24" value="<%= study %>"/>
+    <input type="number" name="eating" placeholder="quality of eating" min="1" max="5" value="<%= eating %>"/>
+    <input type="number" name="mood" placeholder="mood" min="1" max="5" value="<%= emood %>"/>
+    <input type="date" name="date" placeholder="date" value="<%= date %>"/>
+    <input type="submit" value="report evening behavior" />
+</form>
+
+<form method="POST" action="/auth/logout">
+    <input type="submit" value="logout" />
+</form>

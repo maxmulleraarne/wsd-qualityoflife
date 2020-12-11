@@ -1,0 +1,26 @@
+<form method="POST" action="/auth/logout">
+    <input type="submit" value="logout" />
+</form>
+
+<h2>You can choose a specific timeframe (start date / end date) below!</h2>
+<form method="POST" action="/behavior/chooseInterval">
+    <input type="date" name="startdate" placeholder="startdate" />
+    <input type="date" name="enddate" placeholder="enddate" />
+    <input type="submit" value="submitdates" />
+</form>
+
+<h2>Average stats from <%= start %> to <%= end %></h2>
+<ul>
+    <li>Average sleep duration <%= lw.sleepd %></li>
+    <li>Average sleep quality <%= lw.sleepq %></li>
+    <li>Average morning mood <%= lw.mormood %></li>
+    <li>Average time spent on sports <%= lw.sportdur %></li>
+    <li>Average time spent on studying <%= lw.studydur %></li>
+    <li>Average regularity and quality of eating <%= lw.eat %></li>
+    <li>Average evening mood <%= lw.evemood %></li>
+</ul>
+
+
+<form method="POST" action="/">
+    <input type="submit" value="homepage" />
+</form>
